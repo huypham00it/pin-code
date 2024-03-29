@@ -1,4 +1,4 @@
 export interface ButtonProps {
-  type?: string
+  type?: 'button' | 'reset' | 'submit'
   disabled?: boolean
 }
