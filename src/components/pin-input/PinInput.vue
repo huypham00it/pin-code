@@ -79,6 +79,7 @@ watch(
 watch(
   () => props.length,
   () => {
+    cells.value = []
     reset()
   }
 )

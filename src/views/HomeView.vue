@@ -53,7 +53,7 @@ const handleSubmitted = () => {
       <PinInput
         :secure="secureMode ? true : false"
         v-model="model"
-        :length="selectedValue"
+        :length="Number(selectedValue)"
         autofocus
         input-class="pinInput"
         @completed="handleCompleted"
