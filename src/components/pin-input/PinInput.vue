@@ -76,13 +76,10 @@ watch(
   }
 )
 
-watch(
-  () => props.length,
-  () => {
-    cells.value = []
-    reset()
-  }
-)
+watch([() => props.length, () => props.secure], () => {
+  cells.value = []
+  reset()
+})
 
 watch(pinCodeComputed, (val, oldVal) => {
   emit('update:modelValue', val)
