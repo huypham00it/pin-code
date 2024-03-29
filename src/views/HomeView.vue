@@ -51,7 +51,7 @@ const handleSubmitted = () => {
     <section class="bg-white rounded-3xl p-10 shadow-lg flex flex-col gap-8">
       <h1 class="text-center text-3xl font-bold mb-4">PIN CODE</h1>
       <PinInput
-        :secure="Boolean(secureMode)"
+        :secure="secureMode == 1 ? true : false"
         v-model="model"
         :length="Number(selectedValue)"
         autofocus
